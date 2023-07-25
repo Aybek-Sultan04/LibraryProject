@@ -22,6 +22,7 @@ namespace LibraryProject.Menu
                 try
                 {
                     byte action = Convert.ToByte(Console.ReadLine());
+                    Console.Clear();
                     switch (action)
                     {
                         case 1:
@@ -36,8 +37,8 @@ namespace LibraryProject.Menu
                         case 4:
                             var delete = DeleteBook.DeleteAsync();
                             break;
-                        case 5: 
-
+                        case 5:
+                            SecondMenu.MenuSecond();
                             break;
                         case 6:
                             move = false;
