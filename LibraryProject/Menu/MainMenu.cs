@@ -44,6 +44,9 @@ namespace LibraryProject.Menu
                             move = false;
                             break;
                         default:
+                            Console.WriteLine("Not such option");
+                            Console.ReadKey();
+                            Console.Clear();
                             break;
                     }
                 }

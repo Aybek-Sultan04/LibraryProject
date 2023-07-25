@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LibraryProject.Book;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,26 +12,27 @@ namespace LibraryProject.Menu
         public static void MenuSecond()
         {
             Console.WriteLine("1.The most expensive book in the library");
-            Console.WriteLine("2.Best selling book in the library");
-            Console.WriteLine("3.Best selling 3 books");
-            Console.WriteLine("4.Worst selling book in the library");
+            Console.WriteLine("2.The cheapest book in the library");
+            Console.WriteLine("3.The thickest book in the library");
             Console.WriteLine("5.Back");
             try
             {
                 byte action = Convert.ToByte(Console.ReadLine());
-                switch(action)
+                switch (action)
                 {
                     case 1:
+                        Option.Expensive();
                         break;
-                        case 2:
+                    case 2:
+                        Option.Cheap();
                         break;
-                        case 3:
-                        break;
-                        case 4:
-                        break;
-                        case 5:
+                    case 3:
+                        Option.Fat();
                         break;
                     default:
+                        Console.WriteLine("Not such option");
+                        Console.ReadKey();
+                        Console.Clear();
                         break;
                 }
             }

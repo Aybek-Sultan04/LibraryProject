@@ -22,6 +22,9 @@ namespace LibraryProject.CRUD
                 Console.Write("Page of the Book: ");
                 book.PageOfBook = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine(new string('-', 20));
+                Console.Write("Price:");
+                book.Price = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine(new string('-', 20));
                 Console.Write("Autor the book: ");
                 book.Autor = Console.ReadLine();
                 Console.WriteLine(new string('-', 20));
