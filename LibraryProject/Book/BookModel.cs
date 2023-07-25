@@ -10,6 +10,7 @@ namespace LibraryProject.Book
     {
         public string? BookName { get; set; }
         public int PageOfBook { get; set; }
+        public double Price { get; set; }
         public string? Autor { get; set; }
         public DateOnly PublicationDate { get; set; }
         public Guid IdBook { get; set; }
