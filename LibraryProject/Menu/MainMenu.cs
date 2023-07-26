@@ -9,52 +9,50 @@ namespace LibraryProject.Menu
 {
     internal class MainMenu
     {
-        public static void Menu(bool move)
+        public static void Menu()
         {
-            while (move)
-            {
-                Console.WriteLine("1.Add new book");
-                Console.WriteLine("2.Show all book in the libarary");
-                Console.WriteLine("3.Update");
-                Console.WriteLine("4.Delete book");
-                Console.WriteLine("5.Other Fuction");
-                Console.WriteLine("6.Exit");
-                try
-                {
-                    byte action = Convert.ToByte(Console.ReadLine());
-                    Console.Clear();
-                    switch (action)
-                    {
-                        case 1:
-                            CreatBook.Creat(true);
-                            break;
-                        case 2:
-                            ShowAllBook.Show();
-                            break;
-                        case 3:
-                            UpDateBook.UpDate();
-                            break;
-                        case 4:
-                            var delete = DeleteBook.DeleteAsync();
-                            break;
-                        case 5:
-                            SecondMenu.MenuSecond();
-                            break;
-                        case 6:
-                            move = false;
-                            break;
-                        default:
-                            Console.WriteLine("Not such option");
-                            Console.ReadKey();
-                            Console.Clear();
-                            break;
-                    }
-                }
-                catch (Exception ex)
-                {
 
+            Console.WriteLine("1.Add new book");
+            Console.WriteLine("2.Show all book in the libarary");
+            Console.WriteLine("3.Update");
+            Console.WriteLine("4.Delete book");
+            Console.WriteLine("5.Other Fuction");
+            Console.WriteLine("6.Back");
+            try
+            {
+                byte action = Convert.ToByte(Console.ReadLine());
+                Console.Clear();
+                switch (action)
+                {
+                    case 1:
+                        CreatBook.Creat(true);
+                        break;
+                    case 2:
+                        ShowAllBook.Show();
+                        break;
+                    case 3:
+                        UpDateBook.UpDate();
+                        break;
+                    case 4:
+                        var delete = DeleteBook.DeleteAsync();
+                        break;
+                    case 5:
+                        SecondMenu.MenuSecond();
+                        break;
+                    case 6:
+                        return;
+                    default:
+                        Console.WriteLine("Not such option");
+                        Console.ReadKey();
+                        Console.Clear();
+                        break;
                 }
             }
+            catch (Exception ex)
+            {
+
+            }
         }
+
     }
 }
